@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bd_app_disparueModelStoreContainer" CdmEntityContainer="bd_app_disparueEntities">
+    <EntitySetMapping Name="Alertes">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.Alerte">
+        <MappingFragment StoreEntitySet="Alerte">
+          <ScalarProperty Name="alertId" ColumnName="alertId" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dayalert" ColumnName="dayalert" />
+          <ScalarProperty Name="daykidnapping" ColumnName="daykidnapping" />
+          <ScalarProperty Name="looseradress" ColumnName="looseradress" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="descriptionalert" ColumnName="descriptionalert" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="town" ColumnName="town" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="specifications" ColumnName="specifications" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loosers">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.Looser">
+        <MappingFragment StoreEntitySet="Looser">
+          <ScalarProperty Name="LooserId" ColumnName="LooserId" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="daykidnapping" ColumnName="daykidnapping" />
+          <ScalarProperty Name="looseradress" ColumnName="looseradress" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="town" ColumnName="town" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="specifications" ColumnName="specifications" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResearchCurrents">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.ResearchCurrent">
+        <MappingFragment StoreEntitySet="ResearchCurrent">
+          <ScalarProperty Name="researchId" ColumnName="researchId" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="alertId" ColumnName="alertId" />
+          <ScalarProperty Name="dayresearch" ColumnName="dayresearch" />
+          <ScalarProperty Name="dayclosing" ColumnName="dayclosing" />
+          <ScalarProperty Name="looseradress" ColumnName="looseradress" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="descriptionresearch" ColumnName="descriptionresearch" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="town" ColumnName="town" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="specifications" ColumnName="specifications" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Administrators">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.Administrator">
+        <MappingFragment StoreEntitySet="Administrator">
+          <ScalarProperty Name="adminId" ColumnName="adminId" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommunityManagers">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.CommunityManager">
+        <MappingFragment StoreEntitySet="CommunityManager">
+          <ScalarProperty Name="communitymanagerId" ColumnName="communitymanagerId" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="town" ColumnName="town" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="addresse" ColumnName="addresse" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operators">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.Operator">
+        <MappingFragment StoreEntitySet="Operator">
+          <ScalarProperty Name="operatorId" ColumnName="operatorId" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Commenteds">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.Commented">
+        <MappingFragment StoreEntitySet="Commented">
+          <ScalarProperty Name="datecommented" ColumnName="datecommented" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="researchId" ColumnName="researchId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maps">
+      <EntityTypeMapping TypeName="bd_app_disparueModel.Map">
+        <MappingFragment StoreEntitySet="Map">
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="datemapping" ColumnName="datemapping" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="town" ColumnName="town" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="looserId" ColumnName="looserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

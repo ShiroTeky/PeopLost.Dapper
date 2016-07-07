@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bd_app_disparueModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alerte">
+    <Key>
+      <PropertyRef Name="alertId" />
+    </Key>
+    <Property Name="alertId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="15" />
+    <Property Name="lastname" Type="varchar" MaxLength="15" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="dayalert" Type="datetime" />
+    <Property Name="daykidnapping" Type="datetime" />
+    <Property Name="looseradress" Type="varchar" MaxLength="100" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="descriptionalert" Type="varchar" MaxLength="200" />
+    <Property Name="mimetype" Type="varchar" MaxLength="10" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="town" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="specifications" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Commented">
+    <Key>
+      <PropertyRef Name="memberId" />
+      <PropertyRef Name="researchId" />
+    </Key>
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="researchId" Type="int" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="200" />
+    <Property Name="datecommented" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Looser">
+    <Key>
+      <PropertyRef Name="LooserId" />
+    </Key>
+    <Property Name="LooserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="15" />
+    <Property Name="lastname" Type="varchar" MaxLength="15" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="daykidnapping" Type="datetime" />
+    <Property Name="looseradress" Type="varchar" MaxLength="100" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="mimetype" Type="varchar" MaxLength="10" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="town" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="specifications" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Map">
+    <Key>
+      <PropertyRef Name="looserId" />
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="looserId" Type="int" Nullable="false" />
+    <Property Name="longitude" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="latitude" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="adress" Type="varchar" MaxLength="100" />
+    <Property Name="town" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="datemapping" Type="datetime" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResearchCurrent">
+    <Key>
+      <PropertyRef Name="researchId" />
+    </Key>
+    <Property Name="researchId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="15" />
+    <Property Name="lastname" Type="varchar" MaxLength="15" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="alertId" Type="int" />
+    <Property Name="dayresearch" Type="datetime" />
+    <Property Name="dayclosing" Type="datetime" />
+    <Property Name="looseradress" Type="varchar" MaxLength="100" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="descriptionresearch" Type="varchar" MaxLength="200" />
+    <Property Name="mimetype" Type="varchar" MaxLength="10" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="town" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="specifications" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="adminId" />
+    </Key>
+    <Property Name="adminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="15" />
+    <Property Name="lastname" Type="varchar" MaxLength="15" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="mimetype" Type="varchar" MaxLength="10" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CommunityManager">
+    <Key>
+      <PropertyRef Name="communitymanagerId" />
+    </Key>
+    <Property Name="communitymanagerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="15" />
+    <Property Name="lastname" Type="varchar" MaxLength="15" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="mimetype" Type="varchar" MaxLength="10" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="memberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="15" />
+    <Property Name="lastname" Type="varchar" MaxLength="15" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="mimetype" Type="varchar" MaxLength="10" />
+    <Property Name="town" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="addresse" Type="varchar" MaxLength="100" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Operator">
+    <Key>
+      <PropertyRef Name="operatorId" />
+    </Key>
+    <Property Name="operatorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="15" />
+    <Property Name="lastname" Type="varchar" MaxLength="15" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="mimetype" Type="varchar" MaxLength="10" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="bd_app_disparueModelStoreContainer">
+    <EntitySet Name="Alerte" EntityType="Self.Alerte" Schema="Kidnapping" store:Type="Tables" />
+    <EntitySet Name="Commented" EntityType="Self.Commented" Schema="Kidnapping" store:Type="Tables" />
+    <EntitySet Name="Looser" EntityType="Self.Looser" Schema="Kidnapping" store:Type="Tables" />
+    <EntitySet Name="Map" EntityType="Self.Map" Schema="Kidnapping" store:Type="Tables" />
+    <EntitySet Name="ResearchCurrent" EntityType="Self.ResearchCurrent" Schema="Kidnapping" store:Type="Tables" />
+    <EntitySet Name="Administrator" EntityType="Self.Administrator" Schema="Persons" store:Type="Tables" />
+    <EntitySet Name="CommunityManager" EntityType="Self.CommunityManager" Schema="Persons" store:Type="Tables" />
+    <EntitySet Name="Member" EntityType="Self.Member" Schema="Persons" store:Type="Tables" />
+    <EntitySet Name="Operator" EntityType="Self.Operator" Schema="Persons" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

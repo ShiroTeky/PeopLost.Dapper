@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bd_app_disparueModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alerte">
+    <Key>
+      <PropertyRef Name="alertId" />
+    </Key>
+    <Property Name="alertId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="dayalert" Type="DateTime" Precision="3" />
+    <Property Name="daykidnapping" Type="DateTime" Precision="3" />
+    <Property Name="looseradress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="descriptionalert" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="mimetype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="town" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="specifications" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Looser">
+    <Key>
+      <PropertyRef Name="LooserId" />
+    </Key>
+    <Property Name="LooserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="daykidnapping" Type="DateTime" Precision="3" />
+    <Property Name="looseradress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="mimetype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="town" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="specifications" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ResearchCurrent">
+    <Key>
+      <PropertyRef Name="researchId" />
+    </Key>
+    <Property Name="researchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="alertId" Type="Int32" />
+    <Property Name="dayresearch" Type="DateTime" Precision="3" />
+    <Property Name="dayclosing" Type="DateTime" Precision="3" />
+    <Property Name="looseradress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="descriptionresearch" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="mimetype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="town" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="specifications" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="adminId" />
+    </Key>
+    <Property Name="adminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="mimetype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CommunityManager">
+    <Key>
+      <PropertyRef Name="communitymanagerId" />
+    </Key>
+    <Property Name="communitymanagerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="mimetype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="memberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="mimetype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="town" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="addresse" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Operator">
+    <Key>
+      <PropertyRef Name="operatorId" />
+    </Key>
+    <Property Name="operatorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="mimetype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="bd_app_disparueEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alertes" EntityType="Self.Alerte" />
+    <EntitySet Name="Loosers" EntityType="Self.Looser" />
+    <EntitySet Name="ResearchCurrents" EntityType="Self.ResearchCurrent" />
+    <EntitySet Name="Administrators" EntityType="Self.Administrator" />
+    <EntitySet Name="CommunityManagers" EntityType="Self.CommunityManager" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <EntitySet Name="Operators" EntityType="Self.Operator" />
+    <EntitySet Name="Commenteds" EntityType="bd_app_disparueModel.Commented" />
+    <EntitySet Name="Maps" EntityType="bd_app_disparueModel.Map" />
+  </EntityContainer>
+  <EntityType Name="Commented">
+    <Key>
+      <PropertyRef Name="memberId" />
+      <PropertyRef Name="researchId" />
+    </Key>
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="researchId" Type="Int32" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="datecommented" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Map">
+    <Key>
+      <PropertyRef Name="looserId" />
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="looserId" Type="Int32" Nullable="false" />
+    <Property Name="longitude" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="latitude" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="adress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="town" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datemapping" Type="DateTime" Precision="3" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
